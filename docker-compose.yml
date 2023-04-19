@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  fe-sjf:
+    build: ./os-project-SJF
+    ports:
+      - "5001:5000"
+
+  fe-dining:
+    build: ./os-dinning-philosopher
+    ports:
+      - "5002:5000"
+
+  fe-disk:
+    build: ./os-disk-algo
+    ports:
+      - "5003:5000"
+
+  fe-fifo-page:
+    build: ./os-project-fifo-page-replace
+    ports:
+      - "5004:5000"
+
+  # Add more apps if needed
+
+  landing_page:
+    build: ./os-landing-page
+    ports:
+      - "80:80"
